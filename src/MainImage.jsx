@@ -6,7 +6,7 @@ export default function MainImage() {
     console.log(data);
   return <div>{
     data?.result.item.map((item,index)=>(
-        <div key={index}>{item}</div>
+        <div key={index}>{item.imageUrl}</div>
     ))}
     
   </div>;
