@@ -1,4 +1,6 @@
-import MainImage from "./MainImage";
+import DataList from "./DataList";
+// import MainImage from "./MainImage";
+
 
 export default function App() {
   return (
@@ -9,7 +11,7 @@ export default function App() {
     </div>
     <div className="w-full flex flex-col items-center h-[500px]">
       <div className="max-w-7xl w-full h-full bg-blue-200">
-        <MainImage/>
+        <DataList/>
       </div>
     </div>
     </>
