@@ -1,10 +1,10 @@
 import  xml2js from 'react-native-xml2js';
 
 //전체 데이터 리스트
-export async function apiGetData(){
+export async function apiGetList(){
   try{
     let data;
-    const xmlData =await fetch("https://www.cha.go.kr/cha/SearchKindOpenapiList.do?pageUnit=20&ccbaCncl=N&ccbaKdcd=11&ccbaCtcd=11").then(res=> res.text());
+    const xmlData =await fetch("https://www.heritage.go.kr/heri/gungDetail/gogungListOpenApi.do?gung_number=1").then(res=> res.text());
     
     xml2js.parseString(xmlData,(err,result)=>{
       if(err!==null){
