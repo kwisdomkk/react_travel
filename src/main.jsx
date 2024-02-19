@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import {QueryClient,QueryClientProvider} from 'react-query'
-import Detail from './Detail';
+
 
 const router=createBrowserRouter([
   {
