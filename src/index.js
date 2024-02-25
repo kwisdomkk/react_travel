@@ -5,6 +5,7 @@ import App from './App';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import DetailLayout from './DetailLayout';
+import NoticeForm from './NoticeForm';
 
 const router=createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router=createBrowserRouter([
       {
         path:"detail",
         element:<DetailLayout/>
+      },
+      {
+        path:"notice",
+        element:<NoticeForm/>
       }
     ]
   }

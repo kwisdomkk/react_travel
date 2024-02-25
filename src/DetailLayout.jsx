@@ -1,10 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Navigation, Pagination,Scrollbar} from 'swiper';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css/bundle'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import { useQuery } from 'react-query';
 import { apiGetList } from './api';
+
 
 export default function Slider() {
   const { data } = useQuery("getList", apiGetList);
@@ -12,9 +14,10 @@ export default function Slider() {
 
   return (
     <Swiper
+      modules={[Navigation]}
       spaceBetween={50}
       slidesPerView={1}
-      navigation
+      navigation={true}
       pagination={{ clickable: true }}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
@@ -22,17 +25,17 @@ export default function Slider() {
       {items.map((item, index) => (
         <SwiperSlide key={index}>
           <div className='w-full h-screen bg-yellow-100 flex justify-center items-center'>
-            <div className='w-[80%] h-[80%] bg-white rounded-3xl flex flex-col items-center'>
-              <div key={index} className='w-[80%] h-[60%] mt-10'>
+            <div className='w-[90%] h-[90%] bg-white rounded-3xl flex items-center'>
+              <div key={index} className='w-full h-[90%] mr-14 md:flex md:items-center ml-14'>
                 <div
-                  className='rounded-3xl w-full h-full'
+                  className='rounded-3xl w-full h-[50%] md:w-[50%] md:h-[90%] md:mr-12'
                   style={{
                     backgroundImage: item ? `url(${item.imgUrl})` : '',
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
                 ></div>
-                <div className='h-[40%] rounded-3xl p-4 mt-5'>
+                <div className='w-full h-[50%] text-ellipsis overflow-auto mt-5 md:w-[50%] md:h-full md:mt-14'>
                   {item?.explanation_kor}
                 </div>
               </div>
