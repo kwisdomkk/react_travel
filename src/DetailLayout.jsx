@@ -24,7 +24,7 @@ export default function Slider() {
     >
       {items.map((item, index) => (
         <SwiperSlide key={index}>
-          <div className='w-full h-screen bg-yellow-100 flex justify-center items-center'>
+          <div className='w-full h-screen bg-[#8FBFEF] flex justify-center items-center'>
             <div className='w-[90%] h-[90%] bg-white rounded-3xl flex items-center'>
               <div key={index} className='w-full h-[90%] mr-14 md:flex md:items-center ml-14'>
                 <div
@@ -35,7 +35,7 @@ export default function Slider() {
                     backgroundPosition: "center",
                   }}
                 ></div>
-                <div className='w-full h-[50%] text-ellipsis overflow-auto mt-5 md:w-[50%] md:h-full md:mt-14'>
+                <div className='w-full h-[50%] text-ellipsis overflow-auto mt-5 md:w-[50%] md:h-full md:mt-20'>
                   {item?.explanation_kor}
                 </div>
               </div>
