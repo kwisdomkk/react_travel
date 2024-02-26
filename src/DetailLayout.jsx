@@ -45,6 +45,5 @@ export default function Slider() {
       ))}
     </Swiper>
   );
-  
 }
 
